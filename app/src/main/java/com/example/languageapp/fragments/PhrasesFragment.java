@@ -84,16 +84,16 @@ public class PhrasesFragment extends Fragment {
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("Where are you going?", "Unaenda wapi?",R.raw.phrase_where_are_you_going));
-        words.add(new Word("What is your name?", "Jina lako nani?",R.raw.phrase_what_is_your_name));
-        words.add(new Word("My name is...", "Jina langu ni...",R.raw.phrase_my_name_is));
-        words.add(new Word("How are you feeling?", "Unajisikiaje?",R.raw.phrase_how_are_you_feeling));
-        words.add(new Word("I’m feeling good.", "Ninajisikia vizuri.",R.raw.phrase_im_feeling_good));
-        words.add(new Word("Are you coming?", "Unakuja?",R.raw.phrase_are_you_coming));
-        words.add(new Word("Yes, I’m coming.", "Ndio, nakuja.",R.raw.phrase_yes_im_coming));
-        words.add(new Word("I’m coming.", "Nakuja.",R.raw.phrase_im_coming));
-        words.add(new Word("Let’s go.", "Twende.",R.raw.phrase_lets_go));
-        words.add(new Word("Come here.", "Njoo hapa.",R.raw.phrase_come_here));
+        words.add(new Word("Hello", "Jumbo",R.raw.hello));
+        words.add(new Word("how are you?", "habari gani",R.raw.how_are_you));
+        words.add(new Word("What's your name", "Jina lako nani...",R.raw.whats_your_name));
+        words.add(new Word(" My name...", "Mimi naitwa",R.raw.my_name_is));
+        words.add(new Word("Thank you.", "Asante.",R.raw.thank_you));
+        words.add(new Word("Please", "Tafadhali",R.raw.please));
+        words.add(new Word("Good Morning.", "Habari za asubuhi.",R.raw.good_morining));
+        words.add(new Word("Good Afternoon.", "Habari za mchana.",R.raw.good_afternoon));
+        words.add(new Word("Good Night.", "Usiku mwema.",R.raw.good_night));
+        words.add(new Word("Nice to meet you.", "Ninafuraha kukutana nawe.",R.raw.nice_to_meet_you));
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.

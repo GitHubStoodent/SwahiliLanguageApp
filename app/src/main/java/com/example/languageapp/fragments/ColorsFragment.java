@@ -82,16 +82,21 @@ public class ColorsFragment extends Fragment {
         final ArrayList<Word> words = new ArrayList<>();
 
 
-        words.add(new Word("red", "nyekundu", R.mipmap.color_red,R.raw.color_red));
-        words.add(new Word("mustard yellow", "njano ya haradali", R.mipmap.color_mustard_yellow,R.raw.color_mustard_yellow));
-        words.add(new Word("dusty yellow", "manjano yenye vumbi", R.mipmap.color_dusty_yellow,R.raw.color_dusty_yellow));
-        words.add(new Word("green", "kijani", R.mipmap.color_green,R.raw.color_green));
-        words.add(new Word("brown", "kahawia", R.mipmap.color_brown,R.raw.color_brown));
-        words.add(new Word("gray", "kijivu", R.mipmap.color_gray,R.raw.color_gray));
-        words.add(new Word("black", "nyeusi", R.mipmap.color_black,R.raw.color_black));
-        words.add(new Word("white", "nyeupe", R.mipmap.color_white,R.raw.color_white));
+        words.add(new Word("red", "nyekundu", R.mipmap.color_red,R.raw.red));
+        words.add(new Word("mustard yellow", "njano ya haradali", R.mipmap.color_mustard_yellow,R.raw.yellow));
+        words.add(new Word("dusty yellow", "manjano yenye vumbi", R.mipmap.color_dusty_yellow,R.raw.dusty_yellow));
+        words.add(new Word("green", "kijani", R.mipmap.color_green,R.raw.green));
+        words.add(new Word("brown", "kahawia", R.mipmap.color_brown,R.raw.brown));
+        words.add(new Word("gray", "kijivu", R.mipmap.color_gray,R.raw.gray));
+        words.add(new Word("black", "nyeusi", R.mipmap.color_black,R.raw.black));
+        words.add(new Word("white", "nyeupe", R.mipmap.color_white,R.raw.white));
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link WordAdapter}, whose data source is a list of {@l
+        //
+        //
+        //
+        //
+        // ink Word}s. The
         // adapter knows how to create list items for each item in the list.
         WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_colors);
 
