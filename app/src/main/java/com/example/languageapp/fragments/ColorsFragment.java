@@ -1,6 +1,7 @@
 package com.example.languageapp.fragments;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import com.example.languageapp.model.Word;
 import com.example.languageapp.adapters.WordAdapter;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * {@link Fragment} that displays a list of color vocabulary words.
@@ -80,9 +82,25 @@ public class ColorsFragment extends Fragment {
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<>();
+        final ArrayList<Word> words_fr = new ArrayList<>();
 
+            Configuration config = this.getResources().getConfiguration();
+        Locale locale = config.locale;
+        if (locale.getLanguage() == "fr")
+        {
+//French to swahili
+            words.add(new Word("Rouge", "nyekundu", R.mipmap.color_red, R.raw.red));
+            words.add(new Word("mustard yellow", "njano ya haradali", R.mipmap.color_mustard_yellow, R.raw.yellow));
+            words.add(new Word("jaune moutarde ", "manjano yenye vumbi", R.mipmap.color_dusty_yellow, R.raw.dusty_yellow));
+            words.add(new Word("vert", "kijani", R.mipmap.color_green, R.raw.green));
+            words.add(new Word("châtain", "kahawia", R.mipmap.color_brown, R.raw.brown));
+            words.add(new Word("gris", "kijivu", R.mipmap.color_gray, R.raw.gray));
+            words.add(new Word("noir", "nyeusi", R.mipmap.color_black, R.raw.black));
+            words.add(new Word("blanc", "nyeupe", R.mipmap.color_white, R.raw.white));
+        } else {
+            //English to Swahili
 
-        words.add(new Word("red", "nyekundu", R.mipmap.color_red,R.raw.red));
+        words.add(new Word("rose", "nyekundu", R.mipmap.color_red,R.raw.red));
         words.add(new Word("mustard yellow", "njano ya haradali", R.mipmap.color_mustard_yellow,R.raw.yellow));
         words.add(new Word("dusty yellow", "manjano yenye vumbi", R.mipmap.color_dusty_yellow,R.raw.dusty_yellow));
         words.add(new Word("green", "kijani", R.mipmap.color_green,R.raw.green));
@@ -90,6 +108,9 @@ public class ColorsFragment extends Fragment {
         words.add(new Word("gray", "kijivu", R.mipmap.color_gray,R.raw.gray));
         words.add(new Word("black", "nyeusi", R.mipmap.color_black,R.raw.black));
         words.add(new Word("white", "nyeupe", R.mipmap.color_white,R.raw.white));
+
+        }
+
 
         // Create an {@link WordAdapter}, whose data source is a list of {@l
         //

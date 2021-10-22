@@ -2,6 +2,7 @@ package com.example.languageapp.fragments;
 
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.example.languageapp.model.Word;
 import com.example.languageapp.adapters.WordAdapter;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * {@link Fragment} that displays a list of family vocabulary words.
@@ -81,18 +83,43 @@ public class FamilyFragment extends Fragment {
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<>();
+        final ArrayList<Word> words_fr = new ArrayList<>();
 
-        words.add(new Word("father", "baba", R.mipmap.family_father,R.raw.father));
-        words.add(new Word("mother", "mama", R.mipmap.family_mother,R.raw.mother));
-        words.add(new Word("son", "Mtoto was Kiume", R.mipmap.family_son,R.raw.son));
-        words.add(new Word("daughter", "Mtoto wa kike", R.mipmap.family_daughter,R.raw.daughter));
-        words.add(new Word("older brother", "baba mkubwa", R.mipmap.family_older_brother,R.raw.older_brother));
-        words.add(new Word("younger brother", "baba mdogo", R.mipmap.family_younger_brother,R.raw.little_brother));
-        words.add(new Word("older sister", "Mama mkubwa", R.mipmap.family_older_sister,R.raw.older_sister));
-        words.add(new Word("younger sister", "Mama mdogo", R.mipmap.family_younger_sister,R.raw.younger_sister));
-        words.add(new Word("grandmother ", "bibi", R.mipmap.family_grandmother,R.raw.grandmother));
-        words.add(new Word("grandfather", "babu", R.mipmap.family_grandfather,R.raw.grandfather));
+        Configuration config = this.getResources().getConfiguration();
+        Locale locale = config.locale;
+        if (locale.getLanguage() == "fr") {
 
+            //French to Swahili
+
+            words.add(new Word("Un père", "baba", R.mipmap.family_father, R.raw.father));
+            words.add(new Word("Une mère", "mama", R.mipmap.family_mother, R.raw.mother));
+            words.add(new Word("Un fils", "Mtoto was Kiume", R.mipmap.family_son, R.raw.son));
+            words.add(new Word("Une fille", "Mtoto wa kike", R.mipmap.family_daughter, R.raw.daughter));
+            words.add(new Word("Un aîné", "baba mkubwa", R.mipmap.family_older_brother, R.raw.older_brother));
+            words.add(new Word("Un cadet", "baba mdogo", R.mipmap.family_younger_brother, R.raw.little_brother));
+            words.add(new Word("Une aînée", "Mama mkubwa", R.mipmap.family_older_sister, R.raw.older_sister));
+            words.add(new Word("Une cadette", "Mama mdogo", R.mipmap.family_younger_sister, R.raw.younger_sister));
+            words.add(new Word("Une grand-mère ", "bibi", R.mipmap.family_grandmother, R.raw.grandmother));
+            words.add(new Word("Un grand-père", "babu", R.mipmap.family_grandfather, R.raw.grandfather));
+
+        }   else{
+
+
+            words.add(new Word("father", "baba", R.mipmap.family_father, R.raw.father));
+            words.add(new Word("mother", "mama", R.mipmap.family_mother, R.raw.mother));
+            words.add(new Word("son", "Mtoto was Kiume", R.mipmap.family_son, R.raw.son));
+            words.add(new Word("daughter", "Mtoto wa kike", R.mipmap.family_daughter, R.raw.daughter));
+            words.add(new Word("older brother", "baba mkubwa", R.mipmap.family_older_brother, R.raw.older_brother));
+            words.add(new Word("younger brother", "baba mdogo", R.mipmap.family_younger_brother, R.raw.little_brother));
+            words.add(new Word("older sister", "Mama mkubwa", R.mipmap.family_older_sister, R.raw.older_sister));
+            words.add(new Word("younger sister", "Mama mdogo", R.mipmap.family_younger_sister, R.raw.younger_sister));
+            words.add(new Word("grandmother ", "bibi", R.mipmap.family_grandmother, R.raw.grandmother));
+            words.add(new Word("grandfather", "babu", R.mipmap.family_grandfather, R.raw.grandfather));
+
+
+
+
+        }
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
         WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_family);

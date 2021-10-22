@@ -2,6 +2,7 @@ package com.example.languageapp.fragments;
 
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.example.languageapp.model.Word;
 import com.example.languageapp.adapters.WordAdapter;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 //import android.support.v4.app.Fragment;
 
@@ -83,17 +85,37 @@ public class PhrasesFragment extends Fragment {
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<>();
+        Configuration config = this.getResources().getConfiguration();
+        Locale locale = config.locale;
+        if (locale.getLanguage() == "fr") {
 
-        words.add(new Word("Hello", "Jumbo",R.raw.hello));
-        words.add(new Word("how are you?", "habari gani",R.raw.how_are_you));
-        words.add(new Word("What's your name", "Jina lako nani...",R.raw.whats_your_name));
-        words.add(new Word(" My name...", "Mimi naitwa",R.raw.my_name_is));
-        words.add(new Word("Thank you.", "Asante.",R.raw.thank_you));
-        words.add(new Word("Please", "Tafadhali",R.raw.please));
-        words.add(new Word("Good Morning.", "Habari za asubuhi.",R.raw.good_morining));
-        words.add(new Word("Good Afternoon.", "Habari za mchana.",R.raw.good_afternoon));
-        words.add(new Word("Good Night.", "Usiku mwema.",R.raw.good_night));
-        words.add(new Word("Nice to meet you.", "Ninafuraha kukutana nawe.",R.raw.nice_to_meet_you));
+    //English to Swahili
+            words.add(new Word("Bonjour", "Jumbo", R.raw.hello));
+            words.add(new Word("Comment allez-vous?", "habari gani", R.raw.how_are_you));
+            words.add(new Word("Comment tu t'appelles?", "Jina lako nani...", R.raw.whats_your_name));
+            words.add(new Word(" Je m’appelle...", "Mimi naitwa", R.raw.my_name_is));
+            words.add(new Word("Merci.", "Asante.", R.raw.thank_you));
+            words.add(new Word("S’il vous plaît", "Tafadhali", R.raw.please));
+            words.add(new Word("Bonjour.", "Habari za asubuhi.", R.raw.good_morining));
+            words.add(new Word("bon après-midi .", "Habari za mchana.", R.raw.good_afternoon));
+            words.add(new Word("bonne nuit.", "Usiku mwema.", R.raw.good_night));
+            words.add(new Word("Nice to meet you.", "Ninafuraha kukutana nawe.", R.raw.nice_to_meet_you));
+
+        }else {
+    //English to Swahili
+            words.add(new Word("Hello", "Jumbo", R.raw.hello));
+            words.add(new Word("how are you?", "habari gani", R.raw.how_are_you));
+            words.add(new Word("What's your name", "Jina lako nani...", R.raw.whats_your_name));
+            words.add(new Word(" My name...", "Mimi naitwa", R.raw.my_name_is));
+            words.add(new Word("Thank you.", "Asante.", R.raw.thank_you));
+            words.add(new Word("Please", "Tafadhali", R.raw.please));
+            words.add(new Word("Good Morning.", "Habari za asubuhi.", R.raw.good_morining));
+            words.add(new Word("Good Afternoon.", "Habari za mchana.", R.raw.good_afternoon));
+            words.add(new Word("Good Night.", "Usiku mwema.", R.raw.good_night));
+            words.add(new Word("Nice to meet you.", "Ninafuraha kukutana nawe.", R.raw.nice_to_meet_you));
+
+        }
+
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
