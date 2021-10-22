@@ -15,4 +15,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">bonjour fragment vide</string>
+    <string name="logintext_key">Apprentissage des langues brillant</string>
+    <string name="username">"nom d'utilisateur "</string>
+    <string name="passwprd">mot de passe</string>
+    <string name="show_password">afficher le mot de passe</string>
+    <string name="login_button">"connexion "</string>
 </resources>

@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="60dp"
-            android:text="Log In App"
+            android:text="@string/logintext_key"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="34sp"
@@ -34,7 +34,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/etstyle"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="text"
             android:maxLines="1"
             android:paddingLeft="8dp"
@@ -46,7 +46,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/etstyle"
-            android:hint="Password"
+            android:hint="@string/passwprd"
             android:inputType="textPassword"
             android:maxLines="1"
             android:paddingLeft="8dp"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:paddingLeft="8dp"
-            android:text="Show Password"
+            android:text="@string/show_password"
             android:textSize="15dp" />
 
         <Button
@@ -68,7 +68,7 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/btnstylesel"
             android:clickable="true"
-            android:text="Log In"
+            android:text="@string/login_button"
             android:textColor="#fff" />
 
     </LinearLayout>
