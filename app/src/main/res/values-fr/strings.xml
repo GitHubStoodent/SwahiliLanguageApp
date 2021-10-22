@@ -20,4 +20,5 @@
     <string name="passwprd">mot de passe</string>
     <string name="show_password">afficher le mot de passe</string>
     <string name="login_button">"connexion "</string>
+    <string name="sign_up">Vous n\'avez pas de compte? S\'enregistrer.</string>
 </resources>
